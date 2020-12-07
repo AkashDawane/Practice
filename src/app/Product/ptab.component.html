@@ -1,0 +1,30 @@
+<div [ngClass]="{'myclass':flag}">
+<h1>In ptab Component</h1>
+Name: {{name}}  {{sal}} --------  {{flag}} 
+
+{{p.id}}    {{p.name}}     {{p.desg}}      {{p.dept}}
+{{"This is Test Component"}}
+
+
+<button type="button" name="btn" (click)="changeFlag()"> Click Me </button>
+<div *ngIf="flag">
+    <input type="text" name="nm" [(ngModel)]="name">
+</div>
+<div *ngIf="flag" >
+    <table border="2" [ngClass]="{'myc1':flag1 ,'myc2':!flag1}">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Desg</td>
+            <td>Dept</td>
+        </tr>
+        <tr *ngFor="let ob of parr">
+            <td>{{ob.id}}</td>
+            <td>{{ob.name}}</td>
+            <td>{{ob.desg}}</td>
+            <td>{{ob.dept}}</td>
+        </tr>
+    </table>
+</div>
+    <pform></pform>
+</div>
